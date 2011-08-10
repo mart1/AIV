@@ -1,0 +1,41 @@
+hr {
+	clear: both;
+}
+.control {
+	display: block;
+	border: 1px dashed silver;
+	width: 64px;
+	text-align: center;
+	font-family: Arial;
+	font-size: 12px;
+	padding: 5px;
+	padding-bottom: 32px;
+	margin: 5px;
+	position: relative;
+	float: left;
+}
+.control .label {
+	display: block;
+}
+a.switch {
+	display: block;
+	height: 32px;
+	width: 32px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	float: left;
+	text-indent: -9999px;
+	position: absolute;
+	bottom: 0;
+}
+a.switch:hover {
+	background-color: #F2F2F2;
+}
+a.switch.on {
+	background-image: url("/images/bulb yellow.png");
+	left: 0;
+}
+a.switch.off {
+	background-image: url("/images/bulb.png");
+	right: 0;
+}

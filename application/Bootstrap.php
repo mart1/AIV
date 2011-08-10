@@ -3,6 +3,10 @@
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
 
-
+	protected function _initSEO() {
+		$this->bootstrap('view');
+		$view = $this->getResource('view');
+		$view->headTitle('AIV');
+		$view->headTitle()->setSeparator(' - ');
+	}
 }
-
