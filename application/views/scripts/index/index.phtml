@@ -1,43 +1,121 @@
-<style>
-    a:link,
-    a:visited
-    {
-        color: #0398CA;
-    }
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	$('a.switch').click(function () {
+		$.ajax(this.href);
+		return false;
+	});
+});
+</script>
 
-    span#zf-name
-    {
-        color: #91BE3F;
-    }
+<p>
+	<span class="control">
+		<span class="label">Couloir</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::COULOIR, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::COULOIR, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+</p>
 
-    div#welcome
-    {
-        color: #FFFFFF;
-        background-image: url(http://framework.zend.com/images/bkg_header.jpg);
-        width:  600px;
-        height: 400px;
-        border: 2px solid #444444;
-        overflow: hidden;
-        text-align: center;
-    }
+<hr />
 
-    div#more-information
-    {
-        background-image: url(http://framework.zend.com/images/bkg_body-bottom.gif);
-        height: 100%;
-    }
-</style>
-<div id="welcome">
-    <h1>Welcome to the <span id="zf-name">Zend Framework!</span></h1>
+<p>
+	<span class="control">
+		<span class="label">Open-space complet</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
 
-    <h3>This is your project's main page</h3>
+	<span class="control">
+		<span class="label">Moitié de l'open-space</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE_DEMI, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE_DEMI, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
 
-    <div id="more-information">
-        <p><img src="http://framework.zend.com/images/PoweredBy_ZF_4LightBG.png" /></p>
-        <p>
-            Helpful Links: <br />
-            <a href="http://framework.zend.com/">Zend Framework Website</a> |
-            <a href="http://framework.zend.com/manual/en/">Zend Framework Manual</a>
-        </p>
-    </div>
-</div>
+
+	<span class="control">
+		<span class="label">Groupe de bureaux 1</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE_ILOT_1, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE_ILOT_1, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+	<span class="control">
+		<span class="label">Groupe de bureaux 2</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE_ILOT_2, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE_ILOT_2, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+
+	<span class="control">
+		<span class="label">Groupe de bureaux 3</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE_ILOT_3, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::OPEN_SPACE_ILOT_3, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+</p>
+
+<hr />
+
+<p>
+	<span class="control">
+		<span class="label">Bureau de la direction complet</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+
+	<span class="control">
+		<span class="label">Moitié du bureau de la direction</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_DEMI, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_DEMI, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+	<span class="control">
+		<span class="label">Bureau de Grégory</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_GREG, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_GREG, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+	<span class="control">
+		<span class="label">Bureau de Cédric</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_CEDRIC, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_CEDRIC, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+	<span class="control">
+		<span class="label">Bureau de Martin</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_MARTIN, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_MARTIN, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+	<span class="control">
+		<span class="label">Canapé</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_CANAPE, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::DIRECTION_CANAPE, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+</p>
+
+<hr />
+
+<p>
+	<span class="control">
+		<span class="label">Salle de réunion complète</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::REUNION, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::REUNION, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+	<span class="control">
+		<span class="label">Tableau de la salle de réunion</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::REUNION_TABLEAU, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::REUNION_TABLEAU, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+	<span class="control">
+		<span class="label">Lumière centrale de la salle de réunion</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::REUNION_MILIEU, 'switch' => 'on'))?>">Allumer</a>
+		<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::REUNION_MILIEU, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+
+	<span class="control">
+		<span class="label">Lumières des coins de la salle de réunion</span>
+		<a class="switch on" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::REUNION_COINS, 'switch' => 'on'))?>">Allumer</a>
+	<a class="switch off" href="<?=$this->url(array('controller' => 'light', 'code' => Model_EpxZoneCodeMap::REUNION_COINS, 'switch' => 'off'))?>">Eteindre</a>
+	</span>
+</p>

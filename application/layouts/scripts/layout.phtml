@@ -1,0 +1,19 @@
+<?=$this->doctype()?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<?=$this->headTitle()?>
+		<?=$this->headMeta()?>
+		<?=$this->headLink()?>
+		<?=$this->headStyle()?>
+		<?=$this->headScript()?>
+
+		<script type="text/javascript" src="/library/jquery/jquery-1.5.2-min.js"></script>
+		<link href="/styles/all.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<?=$this->inlineScript()?>
+
+		<?=$this->layout()->content?>
+	</body>
+</html>
